@@ -181,12 +181,32 @@ h2 {
   width: 75%;
 }
 .container .Section-One {
-  width: 100%;
   padding: 5%;
   background-color: grey;
+  display: flex;
+  justify-content: center;
 }
-.container .Section-One img {
-  width: 25%;
+.container .Section-One .box {
+  width: 50%;
+  margin: 5% 0;
+}
+.container .Section-One .box .box-wrapper {
+  margin-right: 5%;
+}
+.container .Section-One .box .box-wrapper .profile-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 50%;
+}
+.container .Section-One .box .box-wrapper .profile-img img {
+  width: 50%;
+}
+.container .Section-One .box2 {
+  width: 50%;
+  margin: 5% 0;
+  display: flex;
+  align-items: center;
 }
 .container .Section-One .button-wrapper {
   display: flex;
@@ -216,7 +236,6 @@ h2 {
 }
 .container .Section-Two .box {
   width: 50%;
-  width: 100%;
   margin: 5% 0;
 }
 .container .Section-Two .box .box-wrapper {
@@ -242,7 +261,9 @@ h2 {
   text-align: left;
   width: 100%;
 }
-.container .Section-Three table th,
+.container .Section-Three table th {
+  padding: 2% 1%;
+}
 .container .Section-Three table td {
   padding: 2% 1%;
 }
@@ -252,4 +273,10 @@ h2 {
 }
 .container .Section-Three table tr:nth-child(even) {
   background-color: grey;
+}
+footer {
+  margin-top: 10%;
+  padding: 5% 0;
+  background-color: grey;
+  text-align: center;
 }
