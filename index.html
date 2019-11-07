@@ -2,18 +2,123 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My Resume</title>
-
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
-
 <body>
-  <h1>My Resume</h1>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="container" id="home">
+    <section class="Section-One">
+      <div class="box">
+        <div class="box-wrapper">
+          <div class="profile-img">
+            <img src="images/johnny.jpg" alt="Johnny Appleseed">
+          </div>
+        </div>
+      </div>
+      <div class="box2">
+          <div class="box-wrapper">
+            <h1>Johnny Appleseed - Web Dev</h1>
+            <h2>Technology is my jam!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iste commodi sapiente.</p>
+            <div class="button-wrapper"><a class="button" href="">Let's Team Up</a></div>
+          </div>
+        </div>
+    </section>
+
+    <section class="Section-Two" id="about">
+      <div class="box">
+        <div class="box-wrapper">
+          <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum labore maxime modi dolores et optio veniam officia soluta quam amet rem non, quas laborum nisi numquam ullam deleniti ut obcaecati? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa incidunt odit itaque eum illo vel esse placeat, assumenda libero quasi iusto pariatur nostrum quam magni sapiente iste, nobis debitis. Maiores. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit obcaecati quidem facere alias quaerat ut atque! Ab ad eius, repellat, illo autem, dolorem ratione officia fugit similique et voluptas eaque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia dolor repellat iste. Excepturi dolorum reiciendis, autem quam possimus sunt distinctio odio deserunt, voluptatum velit error nobis explicabo alias praesentium ullam.</p>
+          </div>
+        </div>
+      <div class="box">
+        <div class="box-wrapper">
+          <h2>Skills:</h2>
+            <ul>
+              <li>HTML5 + CSS</li>
+              <li>Coding up UI</li>
+              <li>Javascript + JQuery</li>
+              <li>Using bootstrap grid</li>
+              <li>Taking long Naps</li>
+            </ul>
+        </div>
+      </div>
+    </section>
+    <section class="Section-Three" id="work">
+      <div class="box">
+        <h2>Work History</h2>
+          <table>
+            <tr>
+              <th>Yrs</th>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Tech Used</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Apple</td>
+              <td>Software Engineer</td>
+              <td>Swift</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Microsoft</td>
+              <td>Computer Scientist</td>
+              <td>.NET</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Amazon</td>
+              <td>Dev Ops</td>
+              <td>AWS</td>
+            </tr>
+          </table>
+      </div>
+    </section>
+    <section class="Contact-Section" id="contact">
+        <div class="contact-top">
+          <h2>Contact Me</h2>
+          <p>I'll Get Back To You Within 24 Hours</p>  
+      </div>
+      <div class="form-container">
+            <form action="#">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <div class="form-button"><input type="submit" value="Submit"></div>
+          
+            </form>
+          </div> 
+     
+
+    </section>
+</div>
+  <footer>
+    <div><h3>Copyright Awesomeness 2018</h3></div>
+  </footer>
 </body>
 </html>
+
