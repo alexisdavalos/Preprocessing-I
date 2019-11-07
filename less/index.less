@@ -63,9 +63,9 @@ html, body {
 @heading-font: 'Roboto', sans-serif;
 @general-font: 'Roboto Slab', serif;
 @main-color: black;
-@secondary-color: grey;
-@tertiary-color: cyan;
-
+@secondary-color:  #6ba78c;
+@tertiary-color: #7794ce;
+@color4:#db8992;
 .width100(){
 	width:100%;
 }
@@ -84,15 +84,30 @@ html, body {
 	display:flex;
 	justify-content: flex-start;
 }
+.column(){
+	display:flex;
+	flex-direction:column;
+}
+//End Mixin Declaration
+
 header{
 	display:flex;
 	justify-content: flex-end;
 	margin: 2% 0%;
+	@media(max-width:800px){
+		.center();
+		margin: 5% 0;
+	}
 
 	nav{
 		display:flex;
 		justify-content:space-evenly;
 		width: 25%;
+
+		@media(max-width:800px){
+			justify-content: space-around;
+			width:75%;
+		}
 
 		a{
 			.no-decoration();
@@ -100,7 +115,7 @@ header{
 			font-weight:bold;
 
 			&:hover{
-				color:blue;
+				color:@tertiary-color;
 			}//this ends hover
 		}//this ends a
 
@@ -108,14 +123,26 @@ header{
 } // this ends header 
 h1{
 	font-size: 2rem;
-	margin: 3% 0;
+	margin: 1% 0;
 	font-weight:bold;
+	@media(max-width:800px){
+		font-size:1.5rem;
+	}
 } //h1 end
 h2{
 	font-size: 1.5rem;
-	margin: 3% 0;
+	margin: 1% 0;
 	font-weight:bold;
+	@media(max-width:800px){
+		font-size:1rem;
+	}
 }//h2 end
+p{
+	font-size: 1rem;
+	@media(max-width:800px){
+		font-size:.75rem;
+	}
+}
 
 // Containers Styles
 .container{
@@ -124,19 +151,30 @@ h2{
 
 	.Section-One{
 		padding: 5%;
+		margin-top:5%;
 		background-color:@secondary-color;
 		.center();
+		@media(max-width:800px){
+			text-align:center;
+			.column();	
+		}
 		.box{
 			width:50%;
 			margin: 5% 0;
+			@media(max-width:800px){
+			width:100%;
+			}
 			.box-wrapper{
-				margin-right: 5%;
+				
 				.profile-img{
 					.width100();
 					.center();
 					height:50%;
 					img{
 						width:50%;
+						@media(max-width:800px){
+						width:50%;
+						}
 					}
 				}
 			}
@@ -146,16 +184,27 @@ h2{
 			margin: 5% 0;
 			display:flex;
 			align-items: center;
-		}
+
+			@media(max-width:800px){
+			width:100%;
+			}
+
+			h1,h2,h3,p{
+				color:white;
+				line-height: 1.5;
+			}
 			.button-wrapper{
 				.left();
+				@media(max-width:800px){
+					.center();
+				}
 				margin-top:2%;
 				.button{
-					background-color: white;
-					color: black;
+					background-color: @tertiary-color;
+					color: white;
 					padding: 10px 44px;
 					text-align: center;
-					border: solid 2px black;
+					border: solid 2px @tertiary-color;
 					margin-top: 15px;
 					text-decoration: none;
 					font-weight: bold;
@@ -167,25 +216,45 @@ h2{
 							.width100();
 							padding: 2%;
 						}
+						&:hover{
+						background-color:@color4;
+						border-color:@color4;
+						}
 				}
 			}
+		
+		}
+			
 			
 	} // this ends section one
 
 	.Section-Two{
 		.center();
+		@media(max-width:800px){
+			.column();
+		}//media query end
 			.box{
 				width:50%;
 				margin: 5% 0;
+				@media(max-width:800px){
+					width:100%;
+				}
 				.box-wrapper{
-					margin-right: 5%;
+					p{
+						margin-right: 5%;
+					}
 					li{
+						font-weight:bold;
 						padding: 5%;
 						border-top:solid 1px gray;
 						border-left: solid 1px gray;
 						border-right:solid 1px gray;
 						&:last-child{
 							border-bottom:solid 1px gray;
+						}
+						&:nth-child(odd){
+							background-color:@color4;
+							color:white;
 						}
 					}
 					p{
@@ -212,11 +281,47 @@ h2{
 				border: solid 1px @secondary-color;
 				&:nth-child(even){
 					background-color:@secondary-color;
+					color:white;
 				}
 			}
 			
 		}
 	}//section three end
+	.Contact-Section{
+		margin-top:10%;
+		.contact-top{
+			text-align:center;
+		}
+		.form-container{
+			.center();
+			margin-top:2%;
+			input[type=text], select, textarea {
+				width: 100%; 
+				padding: 12px; 
+				border: 1px solid #ccc; 
+				border-radius: 4px; 
+				box-sizing: border-box; 
+				margin-top: 6px; 
+				margin-bottom: 16px; 
+				resize: vertical;
+			  }
+			input[type=submit] {
+			background-color:black;
+			color: white;
+			padding: 12px 40px;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+				&:hover{
+					background-color:@tertiary-color;
+				}
+			}
+			.form-button{
+				.center();
+			}
+		}	
+		  
+	}
 }//container end
 footer{
 	margin-top:10%;

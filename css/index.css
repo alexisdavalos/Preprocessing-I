@@ -153,10 +153,23 @@ header {
   justify-content: flex-end;
   margin: 2% 0%;
 }
+@media (max-width: 800px) {
+  header {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+  }
+}
 header nav {
   display: flex;
   justify-content: space-evenly;
   width: 25%;
+}
+@media (max-width: 800px) {
+  header nav {
+    justify-content: space-around;
+    width: 75%;
+  }
 }
 header nav a {
   text-decoration: none;
@@ -164,17 +177,35 @@ header nav a {
   font-weight: bold;
 }
 header nav a:hover {
-  color: blue;
+  color: #7794ce;
 }
 h1 {
   font-size: 2rem;
-  margin: 3% 0;
+  margin: 1% 0;
   font-weight: bold;
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 h2 {
   font-size: 1.5rem;
-  margin: 3% 0;
+  margin: 1% 0;
   font-weight: bold;
+}
+@media (max-width: 800px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+p {
+  font-size: 1rem;
+}
+@media (max-width: 800px) {
+  p {
+    font-size: 0.75rem;
+  }
 }
 .container {
   margin: 0 auto;
@@ -182,16 +213,26 @@ h2 {
 }
 .container .Section-One {
   padding: 5%;
-  background-color: grey;
+  margin-top: 5%;
+  background-color: #6ba78c;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 800px) {
+  .container .Section-One {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .container .Section-One .box {
   width: 50%;
   margin: 5% 0;
 }
-.container .Section-One .box .box-wrapper {
-  margin-right: 5%;
+@media (max-width: 800px) {
+  .container .Section-One .box {
+    width: 100%;
+  }
 }
 .container .Section-One .box .box-wrapper .profile-img {
   width: 100%;
@@ -202,46 +243,85 @@ h2 {
 .container .Section-One .box .box-wrapper .profile-img img {
   width: 50%;
 }
+@media (max-width: 800px) {
+  .container .Section-One .box .box-wrapper .profile-img img {
+    width: 50%;
+  }
+}
 .container .Section-One .box2 {
   width: 50%;
   margin: 5% 0;
   display: flex;
   align-items: center;
 }
-.container .Section-One .button-wrapper {
+@media (max-width: 800px) {
+  .container .Section-One .box2 {
+    width: 100%;
+  }
+}
+.container .Section-One .box2 h1,
+.container .Section-One .box2 h2,
+.container .Section-One .box2 h3,
+.container .Section-One .box2 p {
+  color: white;
+  line-height: 1.5;
+}
+.container .Section-One .box2 .button-wrapper {
   display: flex;
   justify-content: flex-start;
   margin-top: 2%;
 }
-.container .Section-One .button-wrapper .button {
-  background-color: white;
-  color: black;
+@media (max-width: 800px) {
+  .container .Section-One .box2 .button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+.container .Section-One .box2 .button-wrapper .button {
+  background-color: #7794ce;
+  color: white;
   padding: 10px 44px;
   text-align: center;
-  border: solid 2px black;
+  border: solid 2px #7794ce;
   margin-top: 15px;
   text-decoration: none;
   font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
 }
-.container .Section-One .button-wrapper .button a {
+.container .Section-One .box2 .button-wrapper .button a {
   text-decoration: none;
   width: 100%;
   padding: 2%;
+}
+.container .Section-One .box2 .button-wrapper .button:hover {
+  background-color: #db8992;
+  border-color: #db8992;
 }
 .container .Section-Two {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 800px) {
+  .container .Section-Two {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container .Section-Two .box {
   width: 50%;
   margin: 5% 0;
 }
-.container .Section-Two .box .box-wrapper {
+@media (max-width: 800px) {
+  .container .Section-Two .box {
+    width: 100%;
+  }
+}
+.container .Section-Two .box .box-wrapper p {
   margin-right: 5%;
 }
 .container .Section-Two .box .box-wrapper li {
+  font-weight: bold;
   padding: 5%;
   border-top: solid 1px gray;
   border-left: solid 1px gray;
@@ -249,6 +329,10 @@ h2 {
 }
 .container .Section-Two .box .box-wrapper li:last-child {
   border-bottom: solid 1px gray;
+}
+.container .Section-Two .box .box-wrapper li:nth-child(odd) {
+  background-color: #db8992;
+  color: white;
 }
 .container .Section-Two .box .box-wrapper p {
   line-height: 1.5;
@@ -269,14 +353,53 @@ h2 {
 }
 .container .Section-Three table tr {
   margin: 0 1%;
-  border: solid 1px grey;
+  border: solid 1px #6ba78c;
 }
 .container .Section-Three table tr:nth-child(even) {
-  background-color: grey;
+  background-color: #6ba78c;
+  color: white;
+}
+.container .Contact-Section {
+  margin-top: 10%;
+}
+.container .Contact-Section .contact-top {
+  text-align: center;
+}
+.container .Contact-Section .form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+.container .Contact-Section .form-container input[type=text],
+.container .Contact-Section .form-container select,
+.container .Contact-Section .form-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container .Contact-Section .form-container input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.container .Contact-Section .form-container input[type=submit]:hover {
+  background-color: #7794ce;
+}
+.container .Contact-Section .form-container .form-button {
+  display: flex;
+  justify-content: center;
 }
 footer {
   margin-top: 10%;
   padding: 5% 0;
-  background-color: grey;
+  background-color: #6ba78c;
   text-align: center;
 }
